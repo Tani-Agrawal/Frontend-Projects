@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProResume</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>ProResume</h1>
+      <p>Build your resume dynamically</p>
+
+      <!-- Template Switcher -->
+      <div class="template-switcher">
+        <button data-template="basic" class="active">Basic</button>
+        <button data-template="modern">Modern</button>
+      </div>
+
+      <!-- Action Controls -->
+      <div class="actions">
+        <button id="printBtn">Export PDF</button>
+      </div>
+
+      <!-- Main Layout -->
+      <div class="layout">
+        <div id="formContainer"></div>
+        <div id="previewContainer"></div>
+      </div>
+    </div>
+
+    <!-- ATS CHECKER -->
+    <div class="ats-section">
+      <h2>ATS Resume Checker</h2>
+      <p>Paste the job description to check resume compatibility</p>
+
+      <textarea
+        id="jobDesc"
+        placeholder="Paste job description here..."
+      ></textarea>
+
+      <button id="atsBtn">Check ATS Score</button>
+
+      <div class="ats-progress">
+        <div class="ats-progress-bar" id="atsProgressBar"></div>
+      </div>
+
+      <div id="atsResult" class="ats-result"></div>
+    </div>
+
+    <script src="schema.js"></script>
+    <script src="templates/template-basic.js"></script>
+    <script src="templates/template-modern.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
